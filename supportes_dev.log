@@ -1,0 +1,535 @@
+2024-09-18T14:53:12.275-03:00  INFO 4708 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Starting EditoraApplication using Java 17.0.12 with PID 4708 (C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora\target\classes started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
+2024-09-18T14:53:12.284-03:00  INFO 4708 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : The following 1 profile is active: "dev"
+2024-09-18T14:53:12.365-03:00  INFO 4708 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-18T14:53:12.365-03:00  INFO 4708 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-18T14:53:12.984-03:00  INFO 4708 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-18T14:53:13.045-03:00  INFO 4708 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2024-09-18T14:53:14.125-03:00  INFO 4708 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-18T14:53:14.148-03:00  INFO 4708 --- [editora] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-18T14:53:14.148-03:00  INFO 4708 --- [editora] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-18T14:53:14.214-03:00  INFO 4708 --- [editora] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-18T14:53:14.220-03:00  INFO 4708 --- [editora] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1849 ms
+2024-09-18T14:53:14.254-03:00  INFO 4708 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-18T14:53:14.516-03:00  INFO 4708 --- [editora] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@64c38e59
+2024-09-18T14:53:14.516-03:00  INFO 4708 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-18T14:53:14.534-03:00  INFO 4708 --- [editora] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/EditoraJava'
+2024-09-18T14:53:14.689-03:00  INFO 4708 --- [editora] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-18T14:53:14.796-03:00  INFO 4708 --- [editora] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-18T14:53:14.850-03:00  INFO 4708 --- [editora] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-18T14:53:15.264-03:00  INFO 4708 --- [editora] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-18T14:53:16.189-03:00  INFO 4708 --- [editora] [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.curso.domains.Autor (class must be instantiated by Interceptor)
+2024-09-18T14:53:16.348-03:00  INFO 4708 --- [editora] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-18T14:53:16.359-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FKkb5yd2w19fu12arb3qtv6dsrk
+2024-09-18T14:53:16.379-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FK2w0m87bv90obqalyg587yw59u
+2024-09-18T14:53:16.379-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists autor cascade
+2024-09-18T14:53:16.395-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists editora cascade
+2024-09-18T14:53:16.395-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists livro cascade
+2024-09-18T14:53:16.404-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_autor
+2024-09-18T14:53:16.409-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_editora
+2024-09-18T14:53:16.415-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_livro
+2024-09-18T14:53:16.424-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_autor start with 1 increment by 50
+2024-09-18T14:53:16.439-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_editora start with 1 increment by 50
+2024-09-18T14:53:16.444-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_livro start with 1 increment by 50
+2024-09-18T14:53:16.444-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create table autor (
+        id integer not null,
+        documeto_pessoal varchar(255) not null,
+        nome varchar(255) not null,
+        primary key (id)
+    )
+2024-09-18T14:53:16.465-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create table editora (
+        id integer not null,
+        cnpj varchar(255) not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2024-09-18T14:53:16.476-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create table livro (
+        autor integer,
+        conservacao smallint check (conservacao between 0 and 3),
+        data_compra date,
+        editora integer,
+        numero_paginas integer not null,
+        status smallint check (status between 0 and 2),
+        valor_compra numeric(18,3) not null,
+        id_livro bigint not null,
+        isbn varchar(255) not null,
+        titulo varchar(255) not null,
+        primary key (id_livro)
+    )
+2024-09-18T14:53:16.485-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FKkb5yd2w19fu12arb3qtv6dsrk 
+       foreign key (autor) 
+       references autor
+2024-09-18T14:53:16.491-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FK2w0m87bv90obqalyg587yw59u 
+       foreign key (editora) 
+       references editora
+2024-09-18T14:53:16.495-03:00  INFO 4708 --- [editora] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-18T14:53:16.864-03:00  WARN 4708 --- [editora] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-18T14:53:17.231-03:00  INFO 4708 --- [editora] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-18T14:53:17.264-03:00  INFO 4708 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-18T14:53:17.275-03:00  INFO 4708 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Started EditoraApplication in 5.551 seconds (process running for 6.136)
+2024-09-18T14:53:25.498-03:00  INFO 4708 --- [editora] [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-18T14:53:25.498-03:00  INFO 4708 --- [editora] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-18T14:53:25.500-03:00  INFO 4708 --- [editora] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-18T14:55:15.928-03:00  INFO 4708 --- [editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-18T14:55:15.928-03:00  INFO 4708 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-18T14:55:15.928-03:00  INFO 4708 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-18T14:55:21.435-03:00  INFO 20320 --- [editora] [main] c.curso.editora.EditoraApplicationTests  : Starting EditoraApplicationTests using Java 17.0.12 with PID 20320 (started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
+2024-09-18T14:55:21.435-03:00  INFO 20320 --- [editora] [main] c.curso.editora.EditoraApplicationTests  : The following 1 profile is active: "dev"
+2024-09-18T14:55:21.953-03:00  INFO 20320 --- [editora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-18T14:55:22.016-03:00  INFO 20320 --- [editora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2024-09-18T14:55:22.750-03:00  INFO 20320 --- [editora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-18T14:55:22.813-03:00  INFO 20320 --- [editora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-18T14:55:22.844-03:00  INFO 20320 --- [editora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-18T14:55:23.266-03:00  INFO 20320 --- [editora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-18T14:55:23.313-03:00  INFO 20320 --- [editora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-18T14:55:23.547-03:00  INFO 20320 --- [editora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7cb29ea8
+2024-09-18T14:55:23.547-03:00  INFO 20320 --- [editora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-18T14:55:24.621-03:00  INFO 20320 --- [editora] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.curso.domains.Autor (class must be instantiated by Interceptor)
+2024-09-18T14:55:24.762-03:00  INFO 20320 --- [editora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-18T14:55:24.777-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FKkb5yd2w19fu12arb3qtv6dsrk
+2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "livro" does not exist, skipping
+2024-09-18T14:55:24.777-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FK2w0m87bv90obqalyg587yw59u
+2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "livro" does not exist, skipping
+2024-09-18T14:55:24.777-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    drop table if exists autor cascade
+2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "autor" does not exist, skipping
+2024-09-18T14:55:24.777-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    drop table if exists editora cascade
+2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "editora" does not exist, skipping
+2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    drop table if exists livro cascade
+2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "livro" does not exist, skipping
+2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    drop sequence if exists seq_autor
+2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "seq_autor" does not exist, skipping
+2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    drop sequence if exists seq_editora
+2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "seq_editora" does not exist, skipping
+2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    drop sequence if exists seq_livro
+2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "seq_livro" does not exist, skipping
+2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    create sequence seq_autor start with 1 increment by 50
+2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    create sequence seq_editora start with 1 increment by 50
+2024-09-18T14:55:24.809-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    create sequence seq_livro start with 1 increment by 50
+2024-09-18T14:55:24.809-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    create table autor (
+        id integer not null,
+        documeto_pessoal varchar(255) not null,
+        nome varchar(255) not null,
+        primary key (id)
+    )
+2024-09-18T14:55:24.824-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    create table editora (
+        id integer not null,
+        cnpj varchar(255) not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2024-09-18T14:55:24.824-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    create table livro (
+        autor integer,
+        conservacao smallint check (conservacao between 0 and 3),
+        data_compra date,
+        editora integer,
+        numero_paginas integer not null,
+        status smallint check (status between 0 and 2),
+        valor_compra numeric(18,3) not null,
+        id_livro bigint not null,
+        isbn varchar(255) not null,
+        titulo varchar(255) not null,
+        primary key (id_livro)
+    )
+2024-09-18T14:55:24.824-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FKkb5yd2w19fu12arb3qtv6dsrk 
+       foreign key (autor) 
+       references autor
+2024-09-18T14:55:24.840-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FK2w0m87bv90obqalyg587yw59u 
+       foreign key (editora) 
+       references editora
+2024-09-18T14:55:24.840-03:00  INFO 20320 --- [editora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-18T14:55:25.411-03:00  WARN 20320 --- [editora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-18T14:55:25.825-03:00  INFO 20320 --- [editora] [main] c.curso.editora.EditoraApplicationTests  : Started EditoraApplicationTests in 4.711 seconds (process running for 5.968)
+2024-09-18T14:55:26.270-03:00  INFO 20320 --- [editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-18T14:55:26.270-03:00  INFO 20320 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-18T14:55:26.270-03:00  INFO 20320 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-18T14:58:08.099-03:00  INFO 8228 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Starting EditoraApplication using Java 17.0.12 with PID 8228 (C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora\target\classes started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
+2024-09-18T14:58:08.099-03:00  INFO 8228 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : The following 1 profile is active: "dev"
+2024-09-18T14:58:08.187-03:00  INFO 8228 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-18T14:58:08.187-03:00  INFO 8228 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-18T14:58:08.839-03:00  INFO 8228 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-18T14:58:08.901-03:00  INFO 8228 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-09-18T14:58:09.902-03:00  INFO 8228 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-18T14:58:09.917-03:00  INFO 8228 --- [editora] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-18T14:58:09.917-03:00  INFO 8228 --- [editora] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-18T14:58:09.996-03:00  INFO 8228 --- [editora] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-18T14:58:09.996-03:00  INFO 8228 --- [editora] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1809 ms
+2024-09-18T14:58:10.027-03:00  INFO 8228 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-18T14:58:10.277-03:00  INFO 8228 --- [editora] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d2a5dec
+2024-09-18T14:58:10.292-03:00  INFO 8228 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-18T14:58:10.292-03:00  INFO 8228 --- [editora] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/ProjetoEditora'
+2024-09-18T14:58:10.464-03:00  INFO 8228 --- [editora] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-18T14:58:10.562-03:00  INFO 8228 --- [editora] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-18T14:58:10.624-03:00  INFO 8228 --- [editora] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-18T14:58:11.027-03:00  INFO 8228 --- [editora] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-18T14:58:12.071-03:00  INFO 8228 --- [editora] [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.curso.domains.Autor (class must be instantiated by Interceptor)
+2024-09-18T14:58:12.227-03:00  INFO 8228 --- [editora] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-18T14:58:12.243-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FKkb5yd2w19fu12arb3qtv6dsrk
+2024-09-18T14:58:12.243-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FK2w0m87bv90obqalyg587yw59u
+2024-09-18T14:58:12.243-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists autor cascade
+2024-09-18T14:58:12.243-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists editora cascade
+2024-09-18T14:58:12.243-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists livro cascade
+2024-09-18T14:58:12.259-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_autor
+2024-09-18T14:58:12.259-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_editora
+2024-09-18T14:58:12.259-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_livro
+2024-09-18T14:58:12.274-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_autor start with 1 increment by 50
+2024-09-18T14:58:12.274-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_editora start with 1 increment by 50
+2024-09-18T14:58:12.274-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_livro start with 1 increment by 50
+2024-09-18T14:58:12.274-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create table autor (
+        id integer not null,
+        documeto_pessoal varchar(255) not null,
+        nome varchar(255) not null,
+        primary key (id)
+    )
+2024-09-18T14:58:12.290-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create table editora (
+        id integer not null,
+        cnpj varchar(255) not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2024-09-18T14:58:12.290-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create table livro (
+        autor integer,
+        conservacao smallint check (conservacao between 0 and 3),
+        data_compra date,
+        editora integer,
+        numero_paginas integer not null,
+        status smallint check (status between 0 and 2),
+        valor_compra numeric(18,3) not null,
+        id_livro bigint not null,
+        isbn varchar(255) not null,
+        titulo varchar(255) not null,
+        primary key (id_livro)
+    )
+2024-09-18T14:58:12.306-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FKkb5yd2w19fu12arb3qtv6dsrk 
+       foreign key (autor) 
+       references autor
+2024-09-18T14:58:12.306-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FK2w0m87bv90obqalyg587yw59u 
+       foreign key (editora) 
+       references editora
+2024-09-18T14:58:12.306-03:00  INFO 8228 --- [editora] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-18T14:58:12.665-03:00  WARN 8228 --- [editora] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-18T14:58:13.040-03:00  INFO 8228 --- [editora] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-18T14:58:13.071-03:00  INFO 8228 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-18T14:58:13.087-03:00  INFO 8228 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Started EditoraApplication in 5.532 seconds (process running for 6.11)
+2024-09-18T15:03:14.150-03:00  INFO 8228 --- [editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-18T15:03:14.166-03:00  INFO 8228 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-18T15:03:14.182-03:00  INFO 8228 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-18T15:21:01.593-03:00  INFO 15452 --- [Editora] [restartedMain] com.curso.editora.EditoraApplication     : Starting EditoraApplication using Java 17.0.12 with PID 15452 (C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora\target\classes started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
+2024-09-18T15:21:01.598-03:00  INFO 15452 --- [Editora] [restartedMain] com.curso.editora.EditoraApplication     : The following 1 profile is active: "dev"
+2024-09-18T15:21:01.679-03:00  INFO 15452 --- [Editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-18T15:21:01.679-03:00  INFO 15452 --- [Editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-18T15:21:02.225-03:00  INFO 15452 --- [Editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-18T15:21:02.280-03:00  INFO 15452 --- [Editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2024-09-18T15:21:03.175-03:00  INFO 15452 --- [Editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-18T15:21:03.192-03:00  INFO 15452 --- [Editora] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-18T15:21:03.193-03:00  INFO 15452 --- [Editora] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-18T15:21:03.271-03:00  INFO 15452 --- [Editora] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-18T15:21:03.271-03:00  INFO 15452 --- [Editora] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1591 ms
+2024-09-18T15:21:03.310-03:00  INFO 15452 --- [Editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-18T15:21:03.557-03:00  INFO 15452 --- [Editora] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5125b484
+2024-09-18T15:21:03.559-03:00  INFO 15452 --- [Editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-18T15:21:03.572-03:00  INFO 15452 --- [Editora] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/ProjetoEditora'
+2024-09-18T15:21:03.738-03:00  INFO 15452 --- [Editora] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-18T15:21:03.807-03:00  INFO 15452 --- [Editora] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-18T15:21:03.850-03:00  INFO 15452 --- [Editora] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-18T15:21:04.189-03:00  INFO 15452 --- [Editora] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-18T15:21:05.098-03:00  INFO 15452 --- [Editora] [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.curso.domains.Autor (class must be instantiated by Interceptor)
+2024-09-18T15:21:05.255-03:00  INFO 15452 --- [Editora] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-18T15:21:05.268-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FKkb5yd2w19fu12arb3qtv6dsrk
+2024-09-18T15:21:05.275-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FK2w0m87bv90obqalyg587yw59u
+2024-09-18T15:21:05.277-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists autor cascade
+2024-09-18T15:21:05.281-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists editora cascade
+2024-09-18T15:21:05.284-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists livro cascade
+2024-09-18T15:21:05.287-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_autor
+2024-09-18T15:21:05.288-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_editora
+2024-09-18T15:21:05.290-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_livro
+2024-09-18T15:21:05.297-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_autor start with 1 increment by 50
+2024-09-18T15:21:05.302-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_editora start with 1 increment by 50
+2024-09-18T15:21:05.305-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_livro start with 1 increment by 50
+2024-09-18T15:21:05.311-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    create table autor (
+        id integer not null,
+        documeto_pessoal varchar(255) not null,
+        nome varchar(255) not null,
+        primary key (id)
+    )
+2024-09-18T15:21:05.323-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    create table editora (
+        id integer not null,
+        cnpj varchar(255) not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2024-09-18T15:21:05.336-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    create table livro (
+        autor integer,
+        conservacao smallint check (conservacao between 0 and 3),
+        data_compra date,
+        editora integer,
+        numero_paginas integer not null,
+        status smallint check (status between 0 and 2),
+        valor_compra numeric(18,3) not null,
+        id_livro bigint not null,
+        isbn varchar(255) not null,
+        titulo varchar(255) not null,
+        primary key (id_livro)
+    )
+2024-09-18T15:21:05.345-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FKkb5yd2w19fu12arb3qtv6dsrk 
+       foreign key (autor) 
+       references autor
+2024-09-18T15:21:05.350-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FK2w0m87bv90obqalyg587yw59u 
+       foreign key (editora) 
+       references editora
+2024-09-18T15:21:05.355-03:00  INFO 15452 --- [Editora] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-18T15:21:05.694-03:00  WARN 15452 --- [Editora] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-18T15:21:06.024-03:00  INFO 15452 --- [Editora] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-18T15:21:06.068-03:00  INFO 15452 --- [Editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-18T15:21:06.079-03:00  INFO 15452 --- [Editora] [restartedMain] com.curso.editora.EditoraApplication     : Started EditoraApplication in 5.014 seconds (process running for 5.603)
+2024-09-18T15:22:10.092-03:00  INFO 15452 --- [Editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-18T15:22:10.092-03:00  INFO 15452 --- [Editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-18T15:22:10.107-03:00  INFO 15452 --- [Editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-18T15:27:25.843-03:00  INFO 20448 --- [Editora] [main] c.curso.editora.EditoraApplicationTests  : Starting EditoraApplicationTests using Java 17.0.12 with PID 20448 (started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
+2024-09-18T15:27:25.845-03:00  INFO 20448 --- [Editora] [main] c.curso.editora.EditoraApplicationTests  : The following 1 profile is active: "dev"
+2024-09-18T15:27:26.572-03:00  INFO 20448 --- [Editora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-18T15:27:26.651-03:00  INFO 20448 --- [Editora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+2024-09-18T15:27:27.664-03:00  INFO 20448 --- [Editora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-18T15:27:27.785-03:00  INFO 20448 --- [Editora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-18T15:27:27.844-03:00  INFO 20448 --- [Editora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-18T15:27:28.570-03:00  INFO 20448 --- [Editora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-18T15:27:28.614-03:00  INFO 20448 --- [Editora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-18T15:27:28.843-03:00  INFO 20448 --- [Editora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7cb29ea8
+2024-09-18T15:27:28.845-03:00  INFO 20448 --- [Editora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-18T15:27:30.151-03:00  INFO 20448 --- [Editora] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.curso.domains.Autor (class must be instantiated by Interceptor)
+2024-09-18T15:27:30.366-03:00  INFO 20448 --- [Editora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-18T15:27:30.389-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FKkb5yd2w19fu12arb3qtv6dsrk
+2024-09-18T15:27:30.392-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FK2w0m87bv90obqalyg587yw59u
+2024-09-18T15:27:30.394-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    drop table if exists autor cascade
+2024-09-18T15:27:30.398-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    drop table if exists editora cascade
+2024-09-18T15:27:30.402-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    drop table if exists livro cascade
+2024-09-18T15:27:30.408-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    drop sequence if exists seq_autor
+2024-09-18T15:27:30.410-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    drop sequence if exists seq_editora
+2024-09-18T15:27:30.413-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    drop sequence if exists seq_livro
+2024-09-18T15:27:30.422-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    create sequence seq_autor start with 1 increment by 50
+2024-09-18T15:27:30.429-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    create sequence seq_editora start with 1 increment by 50
+2024-09-18T15:27:30.431-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    create sequence seq_livro start with 1 increment by 50
+2024-09-18T15:27:30.438-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    create table autor (
+        id integer not null,
+        documeto_pessoal varchar(255) not null,
+        nome varchar(255) not null,
+        primary key (id)
+    )
+2024-09-18T15:27:30.448-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    create table editora (
+        id integer not null,
+        cnpj varchar(255) not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2024-09-18T15:27:30.455-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    create table livro (
+        autor integer,
+        conservacao smallint check (conservacao between 0 and 3),
+        data_compra date,
+        editora integer,
+        numero_paginas integer not null,
+        status smallint check (status between 0 and 2),
+        valor_compra numeric(18,3) not null,
+        id_livro bigint not null,
+        isbn varchar(255) not null,
+        titulo varchar(255) not null,
+        primary key (id_livro)
+    )
+2024-09-18T15:27:30.461-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FKkb5yd2w19fu12arb3qtv6dsrk 
+       foreign key (autor) 
+       references autor
+2024-09-18T15:27:30.465-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FK2w0m87bv90obqalyg587yw59u 
+       foreign key (editora) 
+       references editora
+2024-09-18T15:27:30.471-03:00  INFO 20448 --- [Editora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-18T15:27:30.865-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    select
+        nextval('seq_editora')
+2024-09-18T15:27:30.921-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        editora
+        (cnpj, razao_social, id) 
+    values
+        (?, ?, ?)
+2024-09-18T15:27:30.941-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    select
+        nextval('seq_editora')
+2024-09-18T15:27:30.944-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        editora
+        (cnpj, razao_social, id) 
+    values
+        (?, ?, ?)
+2024-09-18T15:27:30.947-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        editora
+        (cnpj, razao_social, id) 
+    values
+        (?, ?, ?)
+2024-09-18T15:27:30.949-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    select
+        nextval('seq_autor')
+2024-09-18T15:27:30.951-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        autor
+        (documeto_pessoal, nome, id) 
+    values
+        (?, ?, ?)
+2024-09-18T15:27:30.954-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    select
+        nextval('seq_autor')
+2024-09-18T15:27:30.955-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        autor
+        (documeto_pessoal, nome, id) 
+    values
+        (?, ?, ?)
+2024-09-18T15:27:30.958-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        autor
+        (documeto_pessoal, nome, id) 
+    values
+        (?, ?, ?)
+2024-09-18T15:27:30.961-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    select
+        nextval('seq_livro')
+2024-09-18T15:27:30.965-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        livro
+        (autor, conservacao, data_compra, editora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-09-18T15:27:30.971-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    select
+        nextval('seq_livro')
+2024-09-18T15:27:30.973-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        livro
+        (autor, conservacao, data_compra, editora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-09-18T15:27:30.976-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+    insert 
+    into
+        livro
+        (autor, conservacao, data_compra, editora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-09-18T15:27:31.207-03:00  WARN 20448 --- [Editora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-18T15:27:31.661-03:00  INFO 20448 --- [Editora] [main] c.curso.editora.EditoraApplicationTests  : Started EditoraApplicationTests in 6.226 seconds (process running for 7.943)
+2024-09-18T15:27:32.252-03:00  INFO 20448 --- [Editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-18T15:27:32.255-03:00  INFO 20448 --- [Editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-18T15:27:32.265-03:00  INFO 20448 --- [Editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
