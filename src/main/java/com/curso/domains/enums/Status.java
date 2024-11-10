@@ -7,7 +7,7 @@ public enum Status {
     private Integer idStatus;
     private String situacao;
 
-    Status(Integer id, String situacao) {
+    Status(Integer idStatus, String situacao) {
         this.idStatus = idStatus;
         this.situacao = situacao;
     }

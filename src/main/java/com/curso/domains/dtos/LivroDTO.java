@@ -3,31 +3,25 @@ package com.curso.domains.dtos;
 
 import com.curso.domains.Livro;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class LivroDTO {
 
-    private long idLivro;
+    private Long idLivro;
 
     @NotNull(message = "O campo titulo nao pode ser nulo")
     @NotBlank(message = "O campo titulo nao pode estar vazio")
     private String titulo;
 
     @NotNull(message = "O campo isbn nao pode ser nulo")
-    @NotBlank(message = "O campo isbn nao pode estar vazio")
     private String isbn;
 
     @NotNull(message = "O campo numeroPaginas nao pode ser nulo")
-    @NotBlank(message = "o campo numeroPaginas nao pode estar vazio")
     private int numeroPaginas;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
@@ -73,11 +67,11 @@ public class LivroDTO {
 
     }
 
-    public long getIdLivro() {
+    public Long getIdLivro() {
         return idLivro;
     }
 
-    public void setIdLivro(long idLivro) {
+    public void setIdLivro(Long idLivro) {
         this.idLivro = idLivro;
     }
 

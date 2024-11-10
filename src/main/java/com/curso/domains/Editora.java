@@ -1,7 +1,6 @@
 package com.curso.domains;
 
-import com.curso.domains.enums.Conservacao;
-import com.curso.domains.enums.Status;
+import com.curso.domains.dtos.EditoraDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -17,10 +16,11 @@ public class Editora {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_editora")
-    private int idEditora;
+    private Integer idEditora;
 
     @NotNull
     @NotBlank
+    @Column(unique = true)
     private String cnpj;
 
     @NotNull
@@ -33,18 +33,25 @@ public class Editora {
 
     public Editora() { }
 
-    public Editora(int idEditora, String cnpj, String razaoSocial) {
+    public Editora(Integer idEditora, String cnpj, String razaoSocial) {
         this.idEditora = idEditora;
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
 
     }
 
-    public int getIdEditora() {
+    public Editora(EditoraDTO dto){
+        this.idEditora = dto.getIdEditora();
+        this.cnpj = dto.getCnpj();
+        this.razaoSocial = dto.getRazaoSocial();
+
+    }
+
+    public Integer getIdEditora() {
         return idEditora;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.idEditora = idEditora;
     }
 

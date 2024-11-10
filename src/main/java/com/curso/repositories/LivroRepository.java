@@ -12,3 +12,4 @@ public interface LivroRepository extends JpaRepository<Livro, Long> {
 
     Optional<Livro> findByIsbn(String isbn);
 }
+

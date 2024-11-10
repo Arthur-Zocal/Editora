@@ -1,51 +1,29 @@
-2024-10-20T17:28:29.653-03:00  INFO 14780 --- [editora] [main] c.curso.editora.EditoraApplicationTests  : Starting EditoraApplicationTests using Java 17.0.12 with PID 14780 (started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
-2024-10-20T17:28:29.666-03:00  INFO 14780 --- [editora] [main] c.curso.editora.EditoraApplicationTests  : The following 1 profile is active: "test"
-2024-10-20T17:28:30.519-03:00  INFO 14780 --- [editora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-20T17:28:30.579-03:00  INFO 14780 --- [editora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
-2024-10-20T17:28:31.440-03:00  INFO 14780 --- [editora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-20T17:28:31.731-03:00  INFO 14780 --- [editora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:EditoraJava user=SA
-2024-10-20T17:28:31.731-03:00  INFO 14780 --- [editora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-20T17:28:31.813-03:00  INFO 14780 --- [editora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-20T17:28:31.932-03:00  INFO 14780 --- [editora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-10-20T17:28:32.000-03:00  INFO 14780 --- [editora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-20T17:28:32.508-03:00  INFO 14780 --- [editora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-20T17:28:34.018-03:00  INFO 14780 --- [editora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-20T17:28:34.116-03:00  INFO 14780 --- [editora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-20T17:28:34.839-03:00  WARN 14780 --- [editora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-20T17:28:35.203-03:00  INFO 14780 --- [editora] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:EditoraJava'
-2024-10-20T17:28:35.267-03:00  INFO 14780 --- [editora] [main] c.curso.editora.EditoraApplicationTests  : Started EditoraApplicationTests in 6.093 seconds (process running for 8.058)
-2024-10-20T17:28:35.784-03:00  INFO 14780 --- [editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-20T17:28:35.799-03:00  INFO 14780 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-20T17:28:35.805-03:00  INFO 14780 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-20T17:32:58.793-03:00  INFO 19800 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Starting EditoraApplication using Java 17.0.12 with PID 19800 (C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora\target\classes started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
-2024-10-20T17:32:58.796-03:00  INFO 19800 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : The following 1 profile is active: "test"
-2024-10-20T17:32:58.879-03:00  INFO 19800 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-10-20T17:32:58.880-03:00  INFO 19800 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-10-20T17:32:59.607-03:00  INFO 19800 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-20T17:32:59.678-03:00  INFO 19800 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
-2024-10-20T17:33:00.826-03:00  INFO 19800 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-20T17:33:00.843-03:00  INFO 19800 --- [editora] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-20T17:33:00.843-03:00  INFO 19800 --- [editora] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-10-20T17:33:00.922-03:00  INFO 19800 --- [editora] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-20T17:33:00.922-03:00  INFO 19800 --- [editora] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2042 ms
-2024-10-20T17:33:00.969-03:00  INFO 19800 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-20T17:33:01.222-03:00  INFO 19800 --- [editora] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:EditoraJava user=SA
-2024-10-20T17:33:01.222-03:00  INFO 19800 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-20T17:33:01.246-03:00  INFO 19800 --- [editora] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:EditoraJava'
-2024-10-20T17:33:01.441-03:00  INFO 19800 --- [editora] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-20T17:33:01.545-03:00  INFO 19800 --- [editora] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-10-20T17:33:01.599-03:00  INFO 19800 --- [editora] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-20T17:33:02.011-03:00  INFO 19800 --- [editora] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-20T17:33:03.322-03:00  INFO 19800 --- [editora] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-20T17:33:03.391-03:00  INFO 19800 --- [editora] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-20T17:33:04.068-03:00  WARN 19800 --- [editora] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-20T17:33:04.487-03:00  INFO 19800 --- [editora] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-20T17:33:04.533-03:00  INFO 19800 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-20T17:33:04.550-03:00  INFO 19800 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Started EditoraApplication in 6.357 seconds (process running for 7.09)
-2024-10-20T17:33:29.017-03:00  INFO 19800 --- [editora] [http-nio-8080-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-20T17:33:29.018-03:00  INFO 19800 --- [editora] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-20T17:33:29.018-03:00  INFO 19800 --- [editora] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-10-20T17:34:48.824-03:00  INFO 19800 --- [editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-20T17:34:48.835-03:00  WARN 19800 --- [editora] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-10-20T17:34:48.835-03:00  INFO 19800 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-20T17:34:48.842-03:00  INFO 19800 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-10T16:25:23.390-03:00  INFO 4092 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Starting EditoraApplication using Java 17.0.12 with PID 4092 (C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora\target\classes started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
+2024-11-10T16:25:23.390-03:00  INFO 4092 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : The following 1 profile is active: "test"
+2024-11-10T16:25:23.478-03:00  INFO 4092 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-10T16:25:23.478-03:00  INFO 4092 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-10T16:25:24.190-03:00  INFO 4092 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10T16:25:24.268-03:00  INFO 4092 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+2024-11-10T16:25:25.261-03:00  INFO 4092 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-10T16:25:25.276-03:00  INFO 4092 --- [editora] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-10T16:25:25.276-03:00  INFO 4092 --- [editora] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-10T16:25:25.354-03:00  INFO 4092 --- [editora] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-10T16:25:25.354-03:00  INFO 4092 --- [editora] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1876 ms
+2024-11-10T16:25:25.386-03:00  INFO 4092 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-10T16:25:25.651-03:00  INFO 4092 --- [editora] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:EditoraJava user=SA
+2024-11-10T16:25:25.651-03:00  INFO 4092 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-10T16:25:25.667-03:00  INFO 4092 --- [editora] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:EditoraJava'
+2024-11-10T16:25:25.844-03:00  INFO 4092 --- [editora] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10T16:25:25.938-03:00  INFO 4092 --- [editora] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-10T16:25:25.985-03:00  INFO 4092 --- [editora] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-10T16:25:26.360-03:00  INFO 4092 --- [editora] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10T16:25:27.485-03:00  INFO 4092 --- [editora] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10T16:25:27.532-03:00  INFO 4092 --- [editora] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10T16:25:28.125-03:00  WARN 4092 --- [editora] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10T16:25:28.500-03:00  INFO 4092 --- [editora] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-10T16:25:28.532-03:00  INFO 4092 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-10T16:25:28.547-03:00  INFO 4092 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Started EditoraApplication in 5.734 seconds (process running for 6.443)
+2024-11-10T16:26:03.764-03:00  INFO 4092 --- [editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10T16:26:03.764-03:00  WARN 4092 --- [editora] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-11-10T16:26:03.764-03:00  INFO 4092 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-10T16:26:03.764-03:00  INFO 4092 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

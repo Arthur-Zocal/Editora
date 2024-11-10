@@ -27,20 +27,20 @@ public class DBService {
 
     public void initDB(){
 
-        Editora editora01 = new Editora(0,"166178653123","A");
-        Editora editora02 = new Editora(0,"321326678123","B");
-        Editora editora03 = new Editora(0,"323333338123","C");
+        Editora editora01 = new Editora(null,"00023123123","A");
+        Editora editora02 = new Editora(null,"30032132123","B");
+        Editora editora03 = new Editora(null,"32130000123","C");
 
-        Autor autor01 = new Autor(0,"Tiao", "18888812-90");
-        Autor autor02 = new Autor(0,"Jotta","98799999920");
-        Autor autor03 = new Autor(0,"Pedro","98700000020");
+        Autor autor01 = new Autor(null,"Tião", "123456780987");
+        Autor autor02 = new Autor(null,"Tonhão","986453667750");
+        Autor autor03 = new Autor(null,"Tiãonhão","989999999920");
 
-        Livro livro01 = new Livro(0,"Livro A","12345",500,
-                LocalDate.now(), new BigDecimal("150.00"), editora01, autor01,Status.LENDO,Conservacao.BOM);
-        Livro livro02 = new Livro (0,"Livro B","54321", 300,
-                LocalDate.now(), new BigDecimal("90.00"), editora02, autor02,Status.LIDO, Conservacao.MARCADEUSO);
-        Livro livro03 = new Livro (0,"Livro C","12355", 300,
-                LocalDate.now(), new BigDecimal("500.00"), editora03, autor03,Status.LIDO, Conservacao.BOM);
+        Livro livro01 = new Livro(null,"Livro A","00001",1000,
+                LocalDate.now(), new BigDecimal("454.00"), editora01, autor01, Status.LENDO,Conservacao.BOM);
+        Livro livro02 = new Livro (null,"Livro B","00002", 3000,
+                LocalDate.now(), new BigDecimal("455.00"), editora02, autor02,Status.LIDO, Conservacao.MARCADEUSO);
+        Livro livro03 = new Livro (null,"Livro C","00003", 3200,
+                LocalDate.now(), new BigDecimal("456.00"), editora02, autor02,Status.LIDO, Conservacao.MARCADEUSO);
 
 
         editoraRepo.save(editora01);

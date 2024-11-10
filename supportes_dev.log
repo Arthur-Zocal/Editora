@@ -1,535 +1,665 @@
-2024-09-18T14:53:12.275-03:00  INFO 4708 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Starting EditoraApplication using Java 17.0.12 with PID 4708 (C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora\target\classes started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
-2024-09-18T14:53:12.284-03:00  INFO 4708 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : The following 1 profile is active: "dev"
-2024-09-18T14:53:12.365-03:00  INFO 4708 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-09-18T14:53:12.365-03:00  INFO 4708 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-09-18T14:53:12.984-03:00  INFO 4708 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-18T14:53:13.045-03:00  INFO 4708 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
-2024-09-18T14:53:14.125-03:00  INFO 4708 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-09-18T14:53:14.148-03:00  INFO 4708 --- [editora] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-18T14:53:14.148-03:00  INFO 4708 --- [editora] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-18T14:53:14.214-03:00  INFO 4708 --- [editora] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-18T14:53:14.220-03:00  INFO 4708 --- [editora] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1849 ms
-2024-09-18T14:53:14.254-03:00  INFO 4708 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-09-18T14:53:14.516-03:00  INFO 4708 --- [editora] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@64c38e59
-2024-09-18T14:53:14.516-03:00  INFO 4708 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-09-18T14:53:14.534-03:00  INFO 4708 --- [editora] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/EditoraJava'
-2024-09-18T14:53:14.689-03:00  INFO 4708 --- [editora] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-18T14:53:14.796-03:00  INFO 4708 --- [editora] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-09-18T14:53:14.850-03:00  INFO 4708 --- [editora] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-18T14:53:15.264-03:00  INFO 4708 --- [editora] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-18T14:53:16.189-03:00  INFO 4708 --- [editora] [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.curso.domains.Autor (class must be instantiated by Interceptor)
-2024-09-18T14:53:16.348-03:00  INFO 4708 --- [editora] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-18T14:53:16.359-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:10.390-03:00  INFO 1808 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Starting EditoraApplication using Java 17.0.12 with PID 1808 (C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora\target\classes started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
+2024-11-10T16:20:10.403-03:00  INFO 1808 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : The following 1 profile is active: "dev"
+2024-11-10T16:20:10.513-03:00  INFO 1808 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-10T16:20:10.513-03:00  INFO 1808 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-10T16:20:11.272-03:00  INFO 1808 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10T16:20:11.351-03:00  INFO 1808 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
+2024-11-10T16:20:12.356-03:00  INFO 1808 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-10T16:20:12.372-03:00  INFO 1808 --- [editora] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-10T16:20:12.372-03:00  INFO 1808 --- [editora] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-10T16:20:12.434-03:00  INFO 1808 --- [editora] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-10T16:20:12.434-03:00  INFO 1808 --- [editora] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1921 ms
+2024-11-10T16:20:12.481-03:00  INFO 1808 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-10T16:20:12.731-03:00  INFO 1808 --- [editora] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2d53cefd
+2024-11-10T16:20:12.731-03:00  INFO 1808 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-10T16:20:12.747-03:00  INFO 1808 --- [editora] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/EditoraJava'
+2024-11-10T16:20:12.887-03:00  INFO 1808 --- [editora] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10T16:20:13.007-03:00  INFO 1808 --- [editora] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-10T16:20:13.069-03:00  INFO 1808 --- [editora] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@49987e6c
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@49987e6c
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@49987e6c
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@69583089
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@69583089
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@1ead3a18
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@1ead3a18
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@48c31f58
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@48c31f58
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@42a26332
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@42a26332
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@42a26332
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@6a56cf97
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@6a56cf97
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@6a56cf97
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@1c5fe174
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@1c5fe174
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@40a9af1f
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@3f23ef88
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@3f23ef88
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@5f7675c7
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@3c416b1c
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@319deadc
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@319deadc
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@319deadc
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@11e21cc8
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@11e21cc8
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@11e21cc8
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@7dd68b7e
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@7dd68b7e
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@7dd68b7e
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@4af80653
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@4af80653
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@4af80653
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@14eddeda
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@14eddeda
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@14eddeda
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@15e884d3
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@15e884d3
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@5c2c706b
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@5c2c706b
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@56ec2f23
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@56ec2f23
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@56ec2f23
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@2c8d302a
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@7d12e774
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@7d12e774
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@42826f95
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@7520c5d1
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@7520c5d1
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@7520c5d1
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@3069a73f
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@5aaacf01
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@b05ed06
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@7878bffa
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@7878bffa
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@555af95
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@555af95
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@90baaf9
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@2dc21b03
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@1078e62e
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@3879dab3
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@6c71f327
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@51d6f7a9
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@6c8222b
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@6c8222b
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@7012cc03
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@7012cc03
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@1399e1ed
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@1399e1ed
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@75143788
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@75143788
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@328a8a7b
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@328a8a7b
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@541e3afd
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@8542f1a
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@5ca8e1ef
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@5ca8e1ef
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@3a977153
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@1ffb6d2e
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@36fead34
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@2dc2859d
+2024-11-10T16:20:13.176-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@2dc2859d
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@2c5e749f
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@6888ee27
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@2b5c690f
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@2b5c690f
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@128bff94
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@128bff94
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@4d2e9bd6
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@4d2e9bd6
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@4d2e9bd6
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@6278ad82
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@6278ad82
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@6278ad82
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@2a24a4d3
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@679e895c
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@5ed74e52
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@5ed74e52
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@7964ecb7
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@7964ecb7
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@7964ecb7
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@7669cd74
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@65ae6e8c
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@1ef09b5
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@1ef09b5
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@5f305c6b
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@5f305c6b
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@5f305c6b
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@678a2894
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@678a2894
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@71c6f0e7
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@71c6f0e7
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@81dedcb
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@81dedcb
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@55932ba7
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@55932ba7
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@636b7709
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@636b7709
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@25ece24b
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@42f82088
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@296a5eba
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@296a5eba
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@4a8efc31
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@49e454e5
+2024-11-10T16:20:13.192-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@69bfa22e
+2024-11-10T16:20:13.207-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@1fd54247
+2024-11-10T16:20:13.207-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@22074af8
+2024-11-10T16:20:13.207-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@49af7121
+2024-11-10T16:20:13.207-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@5d1514e8
+2024-11-10T16:20:13.207-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@68e7b277
+2024-11-10T16:20:13.207-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@70af7519
+2024-11-10T16:20:13.583-03:00  INFO 1808 --- [editora] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10T16:20:13.779-03:00 DEBUG 1808 --- [editora] [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@2098fd5d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@48c48d85)
+2024-11-10T16:20:13.779-03:00 DEBUG 1808 --- [editora] [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@78a1b223) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@60378e8f)
+2024-11-10T16:20:13.779-03:00 DEBUG 1808 --- [editora] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2004, BlobTypeDescriptor(BLOB_BINDING)) replaced previous registration(BlobTypeDescriptor(DEFAULT))
+2024-11-10T16:20:13.779-03:00 DEBUG 1808 --- [editora] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(CLOB_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-11-10T16:20:13.779-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration JAVA_OBJECT -> org.hibernate.type.JavaObjectType@382614e7
+2024-11-10T16:20:13.779-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@382614e7
+2024-11-10T16:20:13.779-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Type registration key [java.lang.Object] overrode previous entry : `org.hibernate.type.JavaObjectType@296a5eba`
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetDateTimeType -> basicType@2(java.time.OffsetDateTime,3003)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.ZonedDateTimeType -> basicType@3(java.time.ZonedDateTime,3003)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetTimeType -> basicType@4(java.time.OffsetTime,3007)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+2024-11-10T16:20:13.794-03:00 DEBUG 1808 --- [editora] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@49f8b57f] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@4f1097d9]
+2024-11-10T16:20:14.936-03:00  INFO 1808 --- [editora] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10T16:20:14.952-03:00 DEBUG 1808 --- [editora] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@49f8b57f] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@5b767d0e]
+2024-11-10T16:20:14.967-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     alter table if exists livro 
-       drop constraint if exists FKkb5yd2w19fu12arb3qtv6dsrk
-2024-09-18T14:53:16.379-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+       drop constraint if exists FKn0lgu5s5522wg7fo5i6jxvimp
+2024-11-10T16:20:14.983-03:00  WARN 1808 --- [editora] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-10T16:20:14.983-03:00  WARN 1808 --- [editora] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "fkn0lgu5s5522wg7fo5i6jxvimp" of relation "livro" does not exist, skipping
+2024-11-10T16:20:14.983-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     alter table if exists livro 
-       drop constraint if exists FK2w0m87bv90obqalyg587yw59u
-2024-09-18T14:53:16.379-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+       drop constraint if exists FK4cn2ysaivmxmjbt3wswo4ih7n
+2024-11-10T16:20:14.983-03:00  WARN 1808 --- [editora] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-10T16:20:14.983-03:00  WARN 1808 --- [editora] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "fk4cn2ysaivmxmjbt3wswo4ih7n" of relation "livro" does not exist, skipping
+2024-11-10T16:20:14.983-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     drop table if exists autor cascade
-2024-09-18T14:53:16.395-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.014-03:00  WARN 1808 --- [editora] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-10T16:20:15.014-03:00  WARN 1808 --- [editora] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : drop cascades to constraint fkkb5yd2w19fu12arb3qtv6dsrk on table livro
+2024-11-10T16:20:15.014-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     drop table if exists editora cascade
-2024-09-18T14:53:16.395-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.030-03:00  WARN 1808 --- [editora] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-11-10T16:20:15.030-03:00  WARN 1808 --- [editora] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : drop cascades to constraint fk2w0m87bv90obqalyg587yw59u on table livro
+2024-11-10T16:20:15.030-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     drop table if exists livro cascade
-2024-09-18T14:53:16.404-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.030-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     drop sequence if exists seq_autor
-2024-09-18T14:53:16.409-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.045-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     drop sequence if exists seq_editora
-2024-09-18T14:53:16.415-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.045-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     drop sequence if exists seq_livro
-2024-09-18T14:53:16.424-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.045-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     create sequence seq_autor start with 1 increment by 50
-2024-09-18T14:53:16.439-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.061-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     create sequence seq_editora start with 1 increment by 50
-2024-09-18T14:53:16.444-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.077-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     create sequence seq_livro start with 1 increment by 50
-2024-09-18T14:53:16.444-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.077-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     create table autor (
-        id integer not null,
-        documeto_pessoal varchar(255) not null,
+        id_autor integer not null,
+        documento_pessoal varchar(255) not null,
         nome varchar(255) not null,
-        primary key (id)
+        primary key (id_autor)
     )
-2024-09-18T14:53:16.465-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.092-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     create table editora (
-        id integer not null,
-        cnpj varchar(255) not null,
+        id_editora integer not null,
+        cnpj varchar(255) not null unique,
         razao_social varchar(255) not null,
-        primary key (id)
+        primary key (id_editora)
     )
-2024-09-18T14:53:16.476-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.092-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     create table livro (
-        autor integer,
         conservacao smallint check (conservacao between 0 and 3),
         data_compra date,
-        editora integer,
+        idautor integer,
+        ideditora integer,
         numero_paginas integer not null,
         status smallint check (status between 0 and 2),
         valor_compra numeric(18,3) not null,
         id_livro bigint not null,
-        isbn varchar(255) not null,
+        isbn varchar(255) not null unique,
         titulo varchar(255) not null,
         primary key (id_livro)
     )
-2024-09-18T14:53:16.485-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.108-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     alter table if exists livro 
-       add constraint FKkb5yd2w19fu12arb3qtv6dsrk 
-       foreign key (autor) 
+       add constraint FKn0lgu5s5522wg7fo5i6jxvimp 
+       foreign key (idautor) 
        references autor
-2024-09-18T14:53:16.491-03:00 DEBUG 4708 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.108-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     alter table if exists livro 
-       add constraint FK2w0m87bv90obqalyg587yw59u 
-       foreign key (editora) 
+       add constraint FK4cn2ysaivmxmjbt3wswo4ih7n 
+       foreign key (ideditora) 
        references editora
-2024-09-18T14:53:16.495-03:00  INFO 4708 --- [editora] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-18T14:53:16.864-03:00  WARN 4708 --- [editora] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-09-18T14:53:17.231-03:00  INFO 4708 --- [editora] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-09-18T14:53:17.264-03:00  INFO 4708 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-18T14:53:17.275-03:00  INFO 4708 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Started EditoraApplication in 5.551 seconds (process running for 6.136)
-2024-09-18T14:53:25.498-03:00  INFO 4708 --- [editora] [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-18T14:53:25.498-03:00  INFO 4708 --- [editora] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-09-18T14:53:25.500-03:00  INFO 4708 --- [editora] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-09-18T14:55:15.928-03:00  INFO 4708 --- [editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-18T14:55:15.928-03:00  INFO 4708 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-09-18T14:55:15.928-03:00  INFO 4708 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-09-18T14:55:21.435-03:00  INFO 20320 --- [editora] [main] c.curso.editora.EditoraApplicationTests  : Starting EditoraApplicationTests using Java 17.0.12 with PID 20320 (started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
-2024-09-18T14:55:21.435-03:00  INFO 20320 --- [editora] [main] c.curso.editora.EditoraApplicationTests  : The following 1 profile is active: "dev"
-2024-09-18T14:55:21.953-03:00  INFO 20320 --- [editora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-18T14:55:22.016-03:00  INFO 20320 --- [editora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
-2024-09-18T14:55:22.750-03:00  INFO 20320 --- [editora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-18T14:55:22.813-03:00  INFO 20320 --- [editora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-09-18T14:55:22.844-03:00  INFO 20320 --- [editora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-18T14:55:23.266-03:00  INFO 20320 --- [editora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-18T14:55:23.313-03:00  INFO 20320 --- [editora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-09-18T14:55:23.547-03:00  INFO 20320 --- [editora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7cb29ea8
-2024-09-18T14:55:23.547-03:00  INFO 20320 --- [editora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-09-18T14:55:24.621-03:00  INFO 20320 --- [editora] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.curso.domains.Autor (class must be instantiated by Interceptor)
-2024-09-18T14:55:24.762-03:00  INFO 20320 --- [editora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-18T14:55:24.777-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       drop constraint if exists FKkb5yd2w19fu12arb3qtv6dsrk
-2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "livro" does not exist, skipping
-2024-09-18T14:55:24.777-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       drop constraint if exists FK2w0m87bv90obqalyg587yw59u
-2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "livro" does not exist, skipping
-2024-09-18T14:55:24.777-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    drop table if exists autor cascade
-2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-09-18T14:55:24.777-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "autor" does not exist, skipping
-2024-09-18T14:55:24.777-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    drop table if exists editora cascade
-2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "editora" does not exist, skipping
-2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    drop table if exists livro cascade
-2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "livro" does not exist, skipping
-2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    drop sequence if exists seq_autor
-2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "seq_autor" does not exist, skipping
-2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    drop sequence if exists seq_editora
-2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "seq_editora" does not exist, skipping
-2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    drop sequence if exists seq_livro
-2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-09-18T14:55:24.793-03:00  WARN 20320 --- [editora] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "seq_livro" does not exist, skipping
-2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    create sequence seq_autor start with 1 increment by 50
-2024-09-18T14:55:24.793-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    create sequence seq_editora start with 1 increment by 50
-2024-09-18T14:55:24.809-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    create sequence seq_livro start with 1 increment by 50
-2024-09-18T14:55:24.809-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    create table autor (
-        id integer not null,
-        documeto_pessoal varchar(255) not null,
-        nome varchar(255) not null,
-        primary key (id)
-    )
-2024-09-18T14:55:24.824-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    create table editora (
-        id integer not null,
-        cnpj varchar(255) not null,
-        razao_social varchar(255) not null,
-        primary key (id)
-    )
-2024-09-18T14:55:24.824-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    create table livro (
-        autor integer,
-        conservacao smallint check (conservacao between 0 and 3),
-        data_compra date,
-        editora integer,
-        numero_paginas integer not null,
-        status smallint check (status between 0 and 2),
-        valor_compra numeric(18,3) not null,
-        id_livro bigint not null,
-        isbn varchar(255) not null,
-        titulo varchar(255) not null,
-        primary key (id_livro)
-    )
-2024-09-18T14:55:24.824-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       add constraint FKkb5yd2w19fu12arb3qtv6dsrk 
-       foreign key (autor) 
-       references autor
-2024-09-18T14:55:24.840-03:00 DEBUG 20320 --- [editora] [main] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       add constraint FK2w0m87bv90obqalyg587yw59u 
-       foreign key (editora) 
-       references editora
-2024-09-18T14:55:24.840-03:00  INFO 20320 --- [editora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-18T14:55:25.411-03:00  WARN 20320 --- [editora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-09-18T14:55:25.825-03:00  INFO 20320 --- [editora] [main] c.curso.editora.EditoraApplicationTests  : Started EditoraApplicationTests in 4.711 seconds (process running for 5.968)
-2024-09-18T14:55:26.270-03:00  INFO 20320 --- [editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-18T14:55:26.270-03:00  INFO 20320 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-09-18T14:55:26.270-03:00  INFO 20320 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-09-18T14:58:08.099-03:00  INFO 8228 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Starting EditoraApplication using Java 17.0.12 with PID 8228 (C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora\target\classes started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
-2024-09-18T14:58:08.099-03:00  INFO 8228 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : The following 1 profile is active: "dev"
-2024-09-18T14:58:08.187-03:00  INFO 8228 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-09-18T14:58:08.187-03:00  INFO 8228 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-09-18T14:58:08.839-03:00  INFO 8228 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-18T14:58:08.901-03:00  INFO 8228 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
-2024-09-18T14:58:09.902-03:00  INFO 8228 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-09-18T14:58:09.917-03:00  INFO 8228 --- [editora] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-18T14:58:09.917-03:00  INFO 8228 --- [editora] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-18T14:58:09.996-03:00  INFO 8228 --- [editora] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-18T14:58:09.996-03:00  INFO 8228 --- [editora] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1809 ms
-2024-09-18T14:58:10.027-03:00  INFO 8228 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-09-18T14:58:10.277-03:00  INFO 8228 --- [editora] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d2a5dec
-2024-09-18T14:58:10.292-03:00  INFO 8228 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-09-18T14:58:10.292-03:00  INFO 8228 --- [editora] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/ProjetoEditora'
-2024-09-18T14:58:10.464-03:00  INFO 8228 --- [editora] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-18T14:58:10.562-03:00  INFO 8228 --- [editora] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-09-18T14:58:10.624-03:00  INFO 8228 --- [editora] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-18T14:58:11.027-03:00  INFO 8228 --- [editora] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-18T14:58:12.071-03:00  INFO 8228 --- [editora] [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.curso.domains.Autor (class must be instantiated by Interceptor)
-2024-09-18T14:58:12.227-03:00  INFO 8228 --- [editora] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-18T14:58:12.243-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       drop constraint if exists FKkb5yd2w19fu12arb3qtv6dsrk
-2024-09-18T14:58:12.243-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       drop constraint if exists FK2w0m87bv90obqalyg587yw59u
-2024-09-18T14:58:12.243-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    drop table if exists autor cascade
-2024-09-18T14:58:12.243-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    drop table if exists editora cascade
-2024-09-18T14:58:12.243-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    drop table if exists livro cascade
-2024-09-18T14:58:12.259-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    drop sequence if exists seq_autor
-2024-09-18T14:58:12.259-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    drop sequence if exists seq_editora
-2024-09-18T14:58:12.259-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    drop sequence if exists seq_livro
-2024-09-18T14:58:12.274-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    create sequence seq_autor start with 1 increment by 50
-2024-09-18T14:58:12.274-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    create sequence seq_editora start with 1 increment by 50
-2024-09-18T14:58:12.274-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    create sequence seq_livro start with 1 increment by 50
-2024-09-18T14:58:12.274-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    create table autor (
-        id integer not null,
-        documeto_pessoal varchar(255) not null,
-        nome varchar(255) not null,
-        primary key (id)
-    )
-2024-09-18T14:58:12.290-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    create table editora (
-        id integer not null,
-        cnpj varchar(255) not null,
-        razao_social varchar(255) not null,
-        primary key (id)
-    )
-2024-09-18T14:58:12.290-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    create table livro (
-        autor integer,
-        conservacao smallint check (conservacao between 0 and 3),
-        data_compra date,
-        editora integer,
-        numero_paginas integer not null,
-        status smallint check (status between 0 and 2),
-        valor_compra numeric(18,3) not null,
-        id_livro bigint not null,
-        isbn varchar(255) not null,
-        titulo varchar(255) not null,
-        primary key (id_livro)
-    )
-2024-09-18T14:58:12.306-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       add constraint FKkb5yd2w19fu12arb3qtv6dsrk 
-       foreign key (autor) 
-       references autor
-2024-09-18T14:58:12.306-03:00 DEBUG 8228 --- [editora] [restartedMain] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       add constraint FK2w0m87bv90obqalyg587yw59u 
-       foreign key (editora) 
-       references editora
-2024-09-18T14:58:12.306-03:00  INFO 8228 --- [editora] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-18T14:58:12.665-03:00  WARN 8228 --- [editora] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-09-18T14:58:13.040-03:00  INFO 8228 --- [editora] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-09-18T14:58:13.071-03:00  INFO 8228 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-18T14:58:13.087-03:00  INFO 8228 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Started EditoraApplication in 5.532 seconds (process running for 6.11)
-2024-09-18T15:03:14.150-03:00  INFO 8228 --- [editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-18T15:03:14.166-03:00  INFO 8228 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-09-18T15:03:14.182-03:00  INFO 8228 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-09-18T15:21:01.593-03:00  INFO 15452 --- [Editora] [restartedMain] com.curso.editora.EditoraApplication     : Starting EditoraApplication using Java 17.0.12 with PID 15452 (C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora\target\classes started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
-2024-09-18T15:21:01.598-03:00  INFO 15452 --- [Editora] [restartedMain] com.curso.editora.EditoraApplication     : The following 1 profile is active: "dev"
-2024-09-18T15:21:01.679-03:00  INFO 15452 --- [Editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-09-18T15:21:01.679-03:00  INFO 15452 --- [Editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-09-18T15:21:02.225-03:00  INFO 15452 --- [Editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-18T15:21:02.280-03:00  INFO 15452 --- [Editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
-2024-09-18T15:21:03.175-03:00  INFO 15452 --- [Editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-09-18T15:21:03.192-03:00  INFO 15452 --- [Editora] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-18T15:21:03.193-03:00  INFO 15452 --- [Editora] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-18T15:21:03.271-03:00  INFO 15452 --- [Editora] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-18T15:21:03.271-03:00  INFO 15452 --- [Editora] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1591 ms
-2024-09-18T15:21:03.310-03:00  INFO 15452 --- [Editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-09-18T15:21:03.557-03:00  INFO 15452 --- [Editora] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5125b484
-2024-09-18T15:21:03.559-03:00  INFO 15452 --- [Editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-09-18T15:21:03.572-03:00  INFO 15452 --- [Editora] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/ProjetoEditora'
-2024-09-18T15:21:03.738-03:00  INFO 15452 --- [Editora] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-18T15:21:03.807-03:00  INFO 15452 --- [Editora] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-09-18T15:21:03.850-03:00  INFO 15452 --- [Editora] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-18T15:21:04.189-03:00  INFO 15452 --- [Editora] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-18T15:21:05.098-03:00  INFO 15452 --- [Editora] [restartedMain] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.curso.domains.Autor (class must be instantiated by Interceptor)
-2024-09-18T15:21:05.255-03:00  INFO 15452 --- [Editora] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-18T15:21:05.268-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       drop constraint if exists FKkb5yd2w19fu12arb3qtv6dsrk
-2024-09-18T15:21:05.275-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       drop constraint if exists FK2w0m87bv90obqalyg587yw59u
-2024-09-18T15:21:05.277-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    drop table if exists autor cascade
-2024-09-18T15:21:05.281-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    drop table if exists editora cascade
-2024-09-18T15:21:05.284-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    drop table if exists livro cascade
-2024-09-18T15:21:05.287-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    drop sequence if exists seq_autor
-2024-09-18T15:21:05.288-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    drop sequence if exists seq_editora
-2024-09-18T15:21:05.290-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    drop sequence if exists seq_livro
-2024-09-18T15:21:05.297-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    create sequence seq_autor start with 1 increment by 50
-2024-09-18T15:21:05.302-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    create sequence seq_editora start with 1 increment by 50
-2024-09-18T15:21:05.305-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    create sequence seq_livro start with 1 increment by 50
-2024-09-18T15:21:05.311-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    create table autor (
-        id integer not null,
-        documeto_pessoal varchar(255) not null,
-        nome varchar(255) not null,
-        primary key (id)
-    )
-2024-09-18T15:21:05.323-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    create table editora (
-        id integer not null,
-        cnpj varchar(255) not null,
-        razao_social varchar(255) not null,
-        primary key (id)
-    )
-2024-09-18T15:21:05.336-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    create table livro (
-        autor integer,
-        conservacao smallint check (conservacao between 0 and 3),
-        data_compra date,
-        editora integer,
-        numero_paginas integer not null,
-        status smallint check (status between 0 and 2),
-        valor_compra numeric(18,3) not null,
-        id_livro bigint not null,
-        isbn varchar(255) not null,
-        titulo varchar(255) not null,
-        primary key (id_livro)
-    )
-2024-09-18T15:21:05.345-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       add constraint FKkb5yd2w19fu12arb3qtv6dsrk 
-       foreign key (autor) 
-       references autor
-2024-09-18T15:21:05.350-03:00 DEBUG 15452 --- [Editora] [restartedMain] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       add constraint FK2w0m87bv90obqalyg587yw59u 
-       foreign key (editora) 
-       references editora
-2024-09-18T15:21:05.355-03:00  INFO 15452 --- [Editora] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-18T15:21:05.694-03:00  WARN 15452 --- [Editora] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-09-18T15:21:06.024-03:00  INFO 15452 --- [Editora] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-09-18T15:21:06.068-03:00  INFO 15452 --- [Editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-18T15:21:06.079-03:00  INFO 15452 --- [Editora] [restartedMain] com.curso.editora.EditoraApplication     : Started EditoraApplication in 5.014 seconds (process running for 5.603)
-2024-09-18T15:22:10.092-03:00  INFO 15452 --- [Editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-18T15:22:10.092-03:00  INFO 15452 --- [Editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-09-18T15:22:10.107-03:00  INFO 15452 --- [Editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-09-18T15:27:25.843-03:00  INFO 20448 --- [Editora] [main] c.curso.editora.EditoraApplicationTests  : Starting EditoraApplicationTests using Java 17.0.12 with PID 20448 (started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
-2024-09-18T15:27:25.845-03:00  INFO 20448 --- [Editora] [main] c.curso.editora.EditoraApplicationTests  : The following 1 profile is active: "dev"
-2024-09-18T15:27:26.572-03:00  INFO 20448 --- [Editora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-18T15:27:26.651-03:00  INFO 20448 --- [Editora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
-2024-09-18T15:27:27.664-03:00  INFO 20448 --- [Editora] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-18T15:27:27.785-03:00  INFO 20448 --- [Editora] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-09-18T15:27:27.844-03:00  INFO 20448 --- [Editora] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-18T15:27:28.570-03:00  INFO 20448 --- [Editora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-18T15:27:28.614-03:00  INFO 20448 --- [Editora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-09-18T15:27:28.843-03:00  INFO 20448 --- [Editora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7cb29ea8
-2024-09-18T15:27:28.845-03:00  INFO 20448 --- [Editora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-09-18T15:27:30.151-03:00  INFO 20448 --- [Editora] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.curso.domains.Autor (class must be instantiated by Interceptor)
-2024-09-18T15:27:30.366-03:00  INFO 20448 --- [Editora] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-18T15:27:30.389-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       drop constraint if exists FKkb5yd2w19fu12arb3qtv6dsrk
-2024-09-18T15:27:30.392-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       drop constraint if exists FK2w0m87bv90obqalyg587yw59u
-2024-09-18T15:27:30.394-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    drop table if exists autor cascade
-2024-09-18T15:27:30.398-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    drop table if exists editora cascade
-2024-09-18T15:27:30.402-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    drop table if exists livro cascade
-2024-09-18T15:27:30.408-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    drop sequence if exists seq_autor
-2024-09-18T15:27:30.410-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    drop sequence if exists seq_editora
-2024-09-18T15:27:30.413-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    drop sequence if exists seq_livro
-2024-09-18T15:27:30.422-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    create sequence seq_autor start with 1 increment by 50
-2024-09-18T15:27:30.429-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    create sequence seq_editora start with 1 increment by 50
-2024-09-18T15:27:30.431-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    create sequence seq_livro start with 1 increment by 50
-2024-09-18T15:27:30.438-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    create table autor (
-        id integer not null,
-        documeto_pessoal varchar(255) not null,
-        nome varchar(255) not null,
-        primary key (id)
-    )
-2024-09-18T15:27:30.448-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    create table editora (
-        id integer not null,
-        cnpj varchar(255) not null,
-        razao_social varchar(255) not null,
-        primary key (id)
-    )
-2024-09-18T15:27:30.455-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    create table livro (
-        autor integer,
-        conservacao smallint check (conservacao between 0 and 3),
-        data_compra date,
-        editora integer,
-        numero_paginas integer not null,
-        status smallint check (status between 0 and 2),
-        valor_compra numeric(18,3) not null,
-        id_livro bigint not null,
-        isbn varchar(255) not null,
-        titulo varchar(255) not null,
-        primary key (id_livro)
-    )
-2024-09-18T15:27:30.461-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       add constraint FKkb5yd2w19fu12arb3qtv6dsrk 
-       foreign key (autor) 
-       references autor
-2024-09-18T15:27:30.465-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
-    alter table if exists livro 
-       add constraint FK2w0m87bv90obqalyg587yw59u 
-       foreign key (editora) 
-       references editora
-2024-09-18T15:27:30.471-03:00  INFO 20448 --- [Editora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-18T15:27:30.865-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.123-03:00 TRACE 1808 --- [editora] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@5b767d0e] for TypeConfiguration
+2024-11-10T16:20:15.123-03:00  INFO 1808 --- [editora] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10T16:20:15.499-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     select
         nextval('seq_editora')
-2024-09-18T15:27:30.921-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.546-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     insert 
     into
         editora
-        (cnpj, razao_social, id) 
+        (cnpj, razao_social, id_editora) 
     values
         (?, ?, ?)
-2024-09-18T15:27:30.941-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.561-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     select
         nextval('seq_editora')
-2024-09-18T15:27:30.944-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.561-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     insert 
     into
         editora
-        (cnpj, razao_social, id) 
+        (cnpj, razao_social, id_editora) 
     values
         (?, ?, ?)
-2024-09-18T15:27:30.947-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.561-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     insert 
     into
         editora
-        (cnpj, razao_social, id) 
+        (cnpj, razao_social, id_editora) 
     values
         (?, ?, ?)
-2024-09-18T15:27:30.949-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.561-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     select
         nextval('seq_autor')
-2024-09-18T15:27:30.951-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.561-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     insert 
     into
         autor
-        (documeto_pessoal, nome, id) 
+        (documento_pessoal, nome, id_autor) 
     values
         (?, ?, ?)
-2024-09-18T15:27:30.954-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.561-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     select
         nextval('seq_autor')
-2024-09-18T15:27:30.955-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.561-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     insert 
     into
         autor
-        (documeto_pessoal, nome, id) 
+        (documento_pessoal, nome, id_autor) 
     values
         (?, ?, ?)
-2024-09-18T15:27:30.958-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.577-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     insert 
     into
         autor
-        (documeto_pessoal, nome, id) 
+        (documento_pessoal, nome, id_autor) 
     values
         (?, ?, ?)
-2024-09-18T15:27:30.961-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.577-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     select
         nextval('seq_livro')
-2024-09-18T15:27:30.965-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.577-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     insert 
     into
         livro
-        (autor, conservacao, data_compra, editora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
+        (idautor, conservacao, data_compra, ideditora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2024-09-18T15:27:30.971-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.577-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     select
         nextval('seq_livro')
-2024-09-18T15:27:30.973-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.577-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     insert 
     into
         livro
-        (autor, conservacao, data_compra, editora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
+        (idautor, conservacao, data_compra, ideditora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2024-09-18T15:27:30.976-03:00 DEBUG 20448 --- [Editora] [main] org.hibernate.SQL                        : 
+2024-11-10T16:20:15.577-03:00 DEBUG 1808 --- [editora] [restartedMain] org.hibernate.SQL                        : 
     insert 
     into
         livro
-        (autor, conservacao, data_compra, editora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
+        (idautor, conservacao, data_compra, ideditora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2024-09-18T15:27:31.207-03:00  WARN 20448 --- [Editora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-09-18T15:27:31.661-03:00  INFO 20448 --- [Editora] [main] c.curso.editora.EditoraApplicationTests  : Started EditoraApplicationTests in 6.226 seconds (process running for 7.943)
-2024-09-18T15:27:32.252-03:00  INFO 20448 --- [Editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-18T15:27:32.255-03:00  INFO 20448 --- [Editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-09-18T15:27:32.265-03:00  INFO 20448 --- [Editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-10T16:20:15.655-03:00  WARN 1808 --- [editora] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10T16:20:15.999-03:00  INFO 1808 --- [editora] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-10T16:20:16.030-03:00  INFO 1808 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-10T16:20:16.030-03:00  INFO 1808 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Started EditoraApplication in 6.335 seconds (process running for 7.041)
+2024-11-10T16:20:20.846-03:00  INFO 1808 --- [editora] [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10T16:20:20.846-03:00  INFO 1808 --- [editora] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-10T16:20:20.846-03:00  INFO 1808 --- [editora] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-11-10T16:21:45.335-03:00  INFO 1808 --- [editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10T16:21:45.336-03:00 TRACE 1808 --- [editora] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@5b767d0e] for TypeConfiguration
+2024-11-10T16:21:45.336-03:00 DEBUG 1808 --- [editora] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@44ea90c4] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@5b767d0e]
+2024-11-10T16:21:45.339-03:00  INFO 1808 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-10T16:21:45.343-03:00  INFO 1808 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-10T16:22:33.720-03:00  INFO 8604 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Starting EditoraApplication using Java 17.0.12 with PID 8604 (C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora\target\classes started by arthu in C:\Users\arthu\OneDrive\Área de Trabalho\FACULDADE\PROJETOS    (JEFFERSON)\editora)
+2024-11-10T16:22:33.722-03:00  INFO 8604 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : The following 1 profile is active: "dev"
+2024-11-10T16:22:33.802-03:00  INFO 8604 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-10T16:22:33.802-03:00  INFO 8604 --- [editora] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-10T16:22:34.421-03:00  INFO 8604 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10T16:22:34.482-03:00  INFO 8604 --- [editora] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2024-11-10T16:22:35.492-03:00  INFO 8604 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-10T16:22:35.512-03:00  INFO 8604 --- [editora] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-10T16:22:35.512-03:00  INFO 8604 --- [editora] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-10T16:22:35.572-03:00  INFO 8604 --- [editora] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-10T16:22:35.572-03:00  INFO 8604 --- [editora] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1770 ms
+2024-11-10T16:22:35.622-03:00  INFO 8604 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-10T16:22:35.852-03:00  INFO 8604 --- [editora] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@576ba066
+2024-11-10T16:22:35.852-03:00  INFO 8604 --- [editora] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-10T16:22:35.872-03:00  INFO 8604 --- [editora] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/EditoraJava'
+2024-11-10T16:22:36.033-03:00  INFO 8604 --- [editora] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10T16:22:36.145-03:00  INFO 8604 --- [editora] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-10T16:22:36.207-03:00  INFO 8604 --- [editora] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@1c1c0966
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@1c1c0966
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@1c1c0966
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@9170d56
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@9170d56
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@467b4d1c
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@467b4d1c
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@1a2ddd14
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@1a2ddd14
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@6686a00e
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@6686a00e
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@6686a00e
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@574a6c35
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@574a6c35
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@574a6c35
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@6ca1385c
+2024-11-10T16:22:36.308-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@6ca1385c
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@680eda39
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@ded61f5
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@ded61f5
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@114e562d
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@7448ff80
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@6a092c22
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@6a092c22
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@6a092c22
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@c8d0a5f
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@c8d0a5f
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@c8d0a5f
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@6f91cadd
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@6f91cadd
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@6f91cadd
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@5c969c50
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@5c969c50
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@5c969c50
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@7fddc3dc
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@7fddc3dc
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@7fddc3dc
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@1b66e18a
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@1b66e18a
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@7ac00719
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@7ac00719
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@125c600d
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@125c600d
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@125c600d
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@30e92b9
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@2f4849e3
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@2f4849e3
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@55ca7bdc
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@24e72560
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@24e72560
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@24e72560
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@530be01f
+2024-11-10T16:22:36.312-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@3e61bccc
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@38733447
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@25a2da0c
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@25a2da0c
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@29a5cdbf
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@29a5cdbf
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@1a11939b
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@3b614d92
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@8209248
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@fef7ec6
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@19f4a9eb
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@28487a9a
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@24760f09
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@24760f09
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@509b5c0f
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@509b5c0f
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@6c9c0c06
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@6c9c0c06
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@7eb37a5
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@7eb37a5
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@13716e16
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@13716e16
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@19003353
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@1570f049
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@4bf8ab5d
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@4bf8ab5d
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@53617dea
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@4be3567e
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@590305f3
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@572fffcd
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@572fffcd
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@f7956ef
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@5ef8b1d8
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@1f150b69
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@1f150b69
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@37ec5ed1
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@37ec5ed1
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@7267a8ed
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@7267a8ed
+2024-11-10T16:22:36.317-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@7267a8ed
+2024-11-10T16:22:36.321-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@698ab108
+2024-11-10T16:22:36.321-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@698ab108
+2024-11-10T16:22:36.321-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@698ab108
+2024-11-10T16:22:36.321-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@5ef3b113
+2024-11-10T16:22:36.321-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@b3c76ca
+2024-11-10T16:22:36.321-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@44d38780
+2024-11-10T16:22:36.321-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@44d38780
+2024-11-10T16:22:36.321-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@78ed7ce3
+2024-11-10T16:22:36.321-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@78ed7ce3
+2024-11-10T16:22:36.321-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@78ed7ce3
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@3b5521c4
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@53b79a42
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@b80e833
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@b80e833
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@189987c4
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@189987c4
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@189987c4
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@ad0de12
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@ad0de12
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@65da3080
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@65da3080
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@69178d78
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@69178d78
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@3d648039
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@3d648039
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@31c8f9c9
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@31c8f9c9
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@5229140
+2024-11-10T16:22:36.322-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@508bb0d1
+2024-11-10T16:22:36.324-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@617c3315
+2024-11-10T16:22:36.324-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@617c3315
+2024-11-10T16:22:36.332-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@704b76a1
+2024-11-10T16:22:36.332-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@77db0cd1
+2024-11-10T16:22:36.332-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@15f4c1a9
+2024-11-10T16:22:36.332-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@4602f464
+2024-11-10T16:22:36.332-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@6dd76c7b
+2024-11-10T16:22:36.332-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@42454894
+2024-11-10T16:22:36.332-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@710f20fc
+2024-11-10T16:22:36.332-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@207f5b6d
+2024-11-10T16:22:36.332-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@769d4fad
+2024-11-10T16:22:36.712-03:00  INFO 8604 --- [editora] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10T16:22:36.836-03:00 DEBUG 8604 --- [editora] [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@1f39f996) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@18da5eef)
+2024-11-10T16:22:36.836-03:00 DEBUG 8604 --- [editora] [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4d151b63) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@71562ac4)
+2024-11-10T16:22:36.836-03:00 DEBUG 8604 --- [editora] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2004, BlobTypeDescriptor(BLOB_BINDING)) replaced previous registration(BlobTypeDescriptor(DEFAULT))
+2024-11-10T16:22:36.836-03:00 DEBUG 8604 --- [editora] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(CLOB_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-11-10T16:22:36.852-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration JAVA_OBJECT -> org.hibernate.type.JavaObjectType@57a74cef
+2024-11-10T16:22:36.857-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@57a74cef
+2024-11-10T16:22:36.857-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Type registration key [java.lang.Object] overrode previous entry : `org.hibernate.type.JavaObjectType@617c3315`
+2024-11-10T16:22:36.862-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2024-11-10T16:22:36.862-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2024-11-10T16:22:36.862-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2024-11-10T16:22:36.868-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetDateTimeType -> basicType@2(java.time.OffsetDateTime,3003)
+2024-11-10T16:22:36.868-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+2024-11-10T16:22:36.868-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+2024-11-10T16:22:36.868-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.ZonedDateTimeType -> basicType@3(java.time.ZonedDateTime,3003)
+2024-11-10T16:22:36.868-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+2024-11-10T16:22:36.868-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+2024-11-10T16:22:36.868-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetTimeType -> basicType@4(java.time.OffsetTime,3007)
+2024-11-10T16:22:36.868-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+2024-11-10T16:22:36.868-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+2024-11-10T16:22:36.872-03:00 DEBUG 8604 --- [editora] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2af0abb2] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@5e7d4ef1]
+2024-11-10T16:22:37.962-03:00  INFO 8604 --- [editora] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10T16:22:37.962-03:00 DEBUG 8604 --- [editora] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2af0abb2] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@1fede50f]
+2024-11-10T16:22:37.972-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FKn0lgu5s5522wg7fo5i6jxvimp
+2024-11-10T16:22:37.972-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       drop constraint if exists FK4cn2ysaivmxmjbt3wswo4ih7n
+2024-11-10T16:22:37.982-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists autor cascade
+2024-11-10T16:22:37.982-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists editora cascade
+2024-11-10T16:22:37.982-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists livro cascade
+2024-11-10T16:22:37.992-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_autor
+2024-11-10T16:22:37.998-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_editora
+2024-11-10T16:22:38.002-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_livro
+2024-11-10T16:22:38.007-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_autor start with 1 increment by 50
+2024-11-10T16:22:38.012-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_editora start with 1 increment by 50
+2024-11-10T16:22:38.014-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_livro start with 1 increment by 50
+2024-11-10T16:22:38.014-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create table autor (
+        id_autor integer not null,
+        documento_pessoal varchar(255) not null,
+        nome varchar(255) not null,
+        primary key (id_autor)
+    )
+2024-11-10T16:22:38.030-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create table editora (
+        id_editora integer not null,
+        cnpj varchar(255) not null unique,
+        razao_social varchar(255) not null,
+        primary key (id_editora)
+    )
+2024-11-10T16:22:38.037-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    create table livro (
+        conservacao smallint check (conservacao between 0 and 3),
+        data_compra date,
+        idautor integer,
+        ideditora integer,
+        numero_paginas integer not null,
+        status smallint check (status between 0 and 2),
+        valor_compra numeric(18,3) not null,
+        id_livro bigint not null,
+        isbn varchar(255) not null unique,
+        titulo varchar(255) not null,
+        primary key (id_livro)
+    )
+2024-11-10T16:22:38.046-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FKn0lgu5s5522wg7fo5i6jxvimp 
+       foreign key (idautor) 
+       references autor
+2024-11-10T16:22:38.052-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists livro 
+       add constraint FK4cn2ysaivmxmjbt3wswo4ih7n 
+       foreign key (ideditora) 
+       references editora
+2024-11-10T16:22:38.052-03:00 TRACE 8604 --- [editora] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@1fede50f] for TypeConfiguration
+2024-11-10T16:22:38.052-03:00  INFO 8604 --- [editora] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10T16:22:38.476-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_editora')
+2024-11-10T16:22:38.532-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        editora
+        (cnpj, razao_social, id_editora) 
+    values
+        (?, ?, ?)
+2024-11-10T16:22:38.547-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_editora')
+2024-11-10T16:22:38.547-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        editora
+        (cnpj, razao_social, id_editora) 
+    values
+        (?, ?, ?)
+2024-11-10T16:22:38.552-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        editora
+        (cnpj, razao_social, id_editora) 
+    values
+        (?, ?, ?)
+2024-11-10T16:22:38.552-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_autor')
+2024-11-10T16:22:38.556-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        autor
+        (documento_pessoal, nome, id_autor) 
+    values
+        (?, ?, ?)
+2024-11-10T16:22:38.556-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_autor')
+2024-11-10T16:22:38.556-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        autor
+        (documento_pessoal, nome, id_autor) 
+    values
+        (?, ?, ?)
+2024-11-10T16:22:38.562-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        autor
+        (documento_pessoal, nome, id_autor) 
+    values
+        (?, ?, ?)
+2024-11-10T16:22:38.562-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_livro')
+2024-11-10T16:22:38.562-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        livro
+        (idautor, conservacao, data_compra, ideditora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-11-10T16:22:38.562-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_livro')
+2024-11-10T16:22:38.572-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        livro
+        (idautor, conservacao, data_compra, ideditora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-11-10T16:22:38.572-03:00 DEBUG 8604 --- [editora] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        livro
+        (idautor, conservacao, data_compra, ideditora, isbn, numero_paginas, status, titulo, valor_compra, id_livro) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-11-10T16:22:38.642-03:00  WARN 8604 --- [editora] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10T16:22:39.047-03:00  INFO 8604 --- [editora] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-10T16:22:39.083-03:00  INFO 8604 --- [editora] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-10T16:22:39.102-03:00  INFO 8604 --- [editora] [restartedMain] com.curso.editora.EditoraApplication     : Started EditoraApplication in 5.948 seconds (process running for 6.62)
+2024-11-10T16:25:12.494-03:00  INFO 8604 --- [editora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10T16:25:12.494-03:00 TRACE 8604 --- [editora] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@1fede50f] for TypeConfiguration
+2024-11-10T16:25:12.494-03:00 DEBUG 8604 --- [editora] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@59afb3e6] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@1fede50f]
+2024-11-10T16:25:12.494-03:00  INFO 8604 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-10T16:25:12.494-03:00  INFO 8604 --- [editora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
