@@ -35,11 +35,11 @@ public class DBService {
         Autor autor02 = new Autor(null,"Tonhão","986453667750");
         Autor autor03 = new Autor(null,"Tiãonhão","989999999920");
 
-        Livro livro01 = new Livro(null,"Livro A","00001",1000,
+        Livro livro01 = new Livro(null,"Livro A","0001",1000,
                 LocalDate.now(), new BigDecimal("454.00"), editora01, autor01, Status.LENDO,Conservacao.BOM);
-        Livro livro02 = new Livro (null,"Livro B","00002", 3000,
+        Livro livro02 = new Livro (null,"Livro B","0002", 3000,
                 LocalDate.now(), new BigDecimal("455.00"), editora02, autor02,Status.LIDO, Conservacao.MARCADEUSO);
-        Livro livro03 = new Livro (null,"Livro C","00003", 3200,
+        Livro livro03 = new Livro (null,"Livro C","0003", 3200,
                 LocalDate.now(), new BigDecimal("456.00"), editora02, autor02,Status.LIDO, Conservacao.MARCADEUSO);
 
 
