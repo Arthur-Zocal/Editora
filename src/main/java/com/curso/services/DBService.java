@@ -31,7 +31,7 @@ public class DBService {
         Editora editora02 = new Editora(null,"30032132123","B");
         Editora editora03 = new Editora(null,"32130000123","C");
 
-        Autor autor01 = new Autor(null,"Tião", "123456780987");
+        Autor autor01 = new Autor(null,"Tião", "12090990987");
         Autor autor02 = new Autor(null,"Tonhão","986453667750");
         Autor autor03 = new Autor(null,"Tiãonhão","989999999920");
 
